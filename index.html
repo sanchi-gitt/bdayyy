@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Nazuka</title>
+  <style>
+    /* Background and center alignment */
+    body {
+      background-color: #A3C9E2; /* Pastel blue */
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      background-image: url('https://www.transparenttextures.com/patterns/heart.png'); /* Heart pattern */
+      background-repeat: repeat;
+    }
+    /* Styling for the birthday message */
+    h1 {
+      color: black;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    /* Styling for the images */
+    img {
+      width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Birthday Message -->
+  <h1>Happy Birthday Nazuka ❤</h1>
+
+  <!-- Placeholder Images (replace with your own images later) -->
+  <img src="photo1.jpg" alt="Nazuka's Photo 1" />
+  <img src="photo2.jpg" alt="Nazuka's Photo 2" />
+
+  <!-- Confetti Effect using JavaScript -->
+  <script>
+    document.body.addEventListener('click', function() {
+      const confetti = document.createElement('div');
+      confetti.innerHTML = '🎉';
+      confetti.style.position = 'absolute';
+      confetti.style.top = ${Math.random() * window.innerHeight}px;
+      confetti.style.left = ${Math.random() * window.innerWidth}px;
+      confetti.style.fontSize = '40px';
+      confetti.style.pointerEvents = 'none';
+      document.body.appendChild(confetti);
+      setTimeout(() => confetti.remove(), 1000);
+    });
+  </script>
+</body>
+</html>
